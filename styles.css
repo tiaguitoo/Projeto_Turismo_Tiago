@@ -1,0 +1,240 @@
+/* =========================
+   BASE
+   ========================= */
+* { box-sizing: border-box; }
+
+:root{
+  --bg:#f4f6f8;
+  --surface:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+
+  --primary:#0ea5a4;
+  --primary-dark:#0b8a89;
+
+  --radius:12px;
+  --shadow:0 8px 20px rgba(0,0,0,.08);
+
+  color-scheme: light dark;
+}
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:980px;
+  margin:auto;
+  padding:24px;
+}
+
+main{ padding-top:28px; }
+
+h1{
+  margin:0;
+  color:var(--primary);
+  font-size:2.2rem;
+}
+
+h2{
+  margin-top:0;
+  font-size:1.4rem;
+}
+
+p{ margin-top:0; }
+
+/* =========================
+   HEADER + NAV
+   ========================= */
+header{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+header .container{
+  padding:22px 24px;
+  text-align:center;
+}
+
+nav{
+  margin-top:18px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav a{
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#f9fafb;
+  color:var(--text);
+  font-weight:700;
+  transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+
+nav a:hover{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   TOGGLE TEMA
+   ========================= */
+.header-controls{
+  margin-top:12px;
+  display:flex;
+  justify-content:center;
+}
+
+.toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--bg);
+}
+
+.toggle input{
+  width:18px;
+  height:18px;
+}
+
+/* =========================
+   GRID + CARDS
+   ========================= */
+.grid{
+  display:grid;
+  gap:16px;
+  align-items:stretch;
+}
+
+@media (width >= 900px){
+  header .container{ text-align:left; }
+  nav{ justify-content:flex-start; }
+  .grid{ grid-template-columns:1fr 1fr; }
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+/* botão sempre alinhado em baixo */
+.card .button,
+.card button{
+  margin-top:auto;
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+.button,
+button{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.button{
+  margin-top:10px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  border:1px solid var(--primary);
+}
+
+.button:hover{
+  background:var(--primary-dark);
+  border-color:var(--primary-dark);
+}
+
+button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+}
+
+button:hover{
+  background:var(--primary-dark);
+}
+
+.btn-secondary{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+}
+
+.btn-secondary:hover{
+  border-color:var(--primary);
+}
+
+/* =========================
+   FORMULÁRIOS
+   ========================= */
+input,
+select,
+textarea{
+  width:100%;
+  max-width:360px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--surface);
+  color:var(--text);
+}
+
+/* =========================
+   ACESSIBILIDADE
+   ========================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:3px solid var(--primary);
+  outline-offset:2px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer{
+  margin-top:40px;
+  padding:18px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+body:has(#theme-toggle:checked){
+  --bg:#0b1220;
+  --surface:#111a2e;
+  --text:#e5e7eb;
+  --muted:#a6b0c2;
+  --border:#22304a;
+  --shadow:0 10px 25px rgba(0,0,0,.35);
+}

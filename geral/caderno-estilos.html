@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geral · Caderno de Estilos - Madeira Tours</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+<header>
+  <div class="container">
+    <h1>Madeira Tours</h1>
+    <p class="subtitle">Marketplace simples para encontrar e reservar experiências.</p>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../lugares/principais-atracoes.html">Lugares</a>
+      <a href="../coisas/melhores-experiencias.html">Coisas</a>
+      <a href="../inspiracao/tendencias.html">Inspiração</a>
+      <a href="../roteiro/atividades-a-realizar.html">Roteiro</a>
+      <a href="../carrinho/lista-artigos.html">Carrinho</a>
+      <a href="../favoritos/lista-artigos.html">Favoritos</a>
+      <a href="../notificacoes/changelog.html">Notificações</a>
+      <a href="../geral/menu_geral.html">Geral</a>
+      <a href="../geral/login.html">Login</a>
+    </nav>
+    <div class="header-controls">
+      <label class="toggle">
+        <input id="theme-toggle" type="checkbox">
+        <span>Tema escuro</span>
+      </label>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" class="container">
+
+  <div class="card">
+    <h2>Caderno de Estilos</h2>
+    <p class="muted">Página de demonstração de componentes e padrões (container queries, dialog, popover e details/summary).</p>
+  </div>
+
+  <section class="card">
+    <h2>Componentes base</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Botões</h3>
+        <p>
+          <button type="button">Primário</button>
+          <button type="button" class="btn-secondary">Secundário</button>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Formulários</h3>
+        <form class="form">
+          <label>Nome
+            <input type="text" placeholder="Ex.: Joana" required minlength="2">
+          </label>
+          <label>Email
+            <input type="email" placeholder="nome@exemplo.pt" required>
+          </label>
+          <label>Participantes
+            <input type="number" min="1" max="12" value="2" required>
+          </label>
+          <p class="muted">Os estados de validação usam <code>::user-valid</code>/<code>::user-invalid</code> com fallback.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Details / Summary (FAQ)</h2>
+    <details>
+      <summary>O que está incluído numa experiência?</summary>
+      <p>Normalmente inclui guia local, paragens principais e informações úteis. Varia conforme a atividade.</p>
+    </details>
+    <details>
+      <summary>Posso cancelar?</summary>
+      <p>Protótipo: sem regras reais. Numa versão final, as condições aparecem no detalhe da atividade.</p>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Dialog</h2>
+    <p><button type="button" onclick="document.getElementById('demoDialog').showModal()">Abrir modal</button></p>
+    <dialog id="demoDialog">
+      <h3>Confirmar ação</h3>
+      <p>Exemplo de <code>&lt;dialog&gt;</code> para confirmar adicionar ao carrinho ou favoritos.</p>
+      <form method="dialog" class="dialog-actions">
+        <button value="cancel" class="btn-secondary">Cancelar</button>
+        <button value="ok">Confirmar</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="card">
+    <h2>Popover</h2>
+    <p>
+      <button type="button" popovertarget="demoPopover" class="btn-secondary">Ver dica</button>
+      <span id="demoPopover" popover class="popover">
+        Dica: use filtros (duração, preço, acessibilidade) para encontrar a melhor experiência.
+      </span>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Container Queries</h2>
+    <p class="muted">O cartão abaixo muda layout conforme a largura do seu contentor (não do ecrã).</p>
+
+    <div class="cq-wrap">
+      <article class="cq-card">
+        <div class="cq-media" aria-hidden="true"></div>
+        <div class="cq-body">
+          <h3>Exemplo: Levada</h3>
+          <p class="muted">Cartão responsivo com <code>@container</code> (padrão útil para listas).</p>
+          <p><button type="button">Ver detalhe</button></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <strong>Madeira Tours</strong>
+      <span class="muted">Protótipo HTML/CSS</span>
+    </div>
+    <nav class="footer-nav" aria-label="Navegação do rodapé">
+      <a href="../index.html">Início</a>
+      <a href="../pesquisa.html">Pesquisa</a>
+      <a href="../gerar-roteiro.html">Gerar Roteiro</a>
+      <a href="../geral/preferencias.html">Preferências</a>
+      <a href="../geral/login.html">Login</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
