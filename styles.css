@@ -1,6 +1,4 @@
-/* =========================
-   BASE
-   ========================= */
+/* base do site */
 * { box-sizing: border-box; }
 
 :root{
@@ -48,9 +46,7 @@ h2{
 
 p{ margin-top:0; }
 
-/* =========================
-   HEADER + NAV
-   ========================= */
+/* cabeçalho e navbar */
 header{
   background:var(--surface);
   border-bottom:1px solid var(--border);
@@ -88,9 +84,7 @@ nav a:hover{
   transform:translateY(-2px);
 }
 
-/* =========================
-   TOGGLE TEMA
-   ========================= */
+/* tema */
 .header-controls{
   margin-top:12px;
   display:flex;
@@ -112,9 +106,7 @@ nav a:hover{
   height:18px;
 }
 
-/* =========================
-   GRID + CARDS
-   ========================= */
+/* grids e cards */
 .grid{
   display:grid;
   gap:16px;
@@ -139,15 +131,13 @@ nav a:hover{
   flex-direction:column;
 }
 
-/* botão sempre alinhado em baixo */
+/* alinhamento de botões */
 .card .button,
 .card button{
   margin-top:auto;
 }
 
-/* =========================
-   BOTÕES
-   ========================= */
+/* botões */
 .button,
 button{
   display:inline-block;
@@ -190,9 +180,7 @@ button:hover{
   border-color:var(--primary);
 }
 
-/* =========================
-   FORMULÁRIOS
-   ========================= */
+/* formulários */
 input,
 select,
 textarea{
@@ -205,9 +193,7 @@ textarea{
   color:var(--text);
 }
 
-/* =========================
-   ACESSIBILIDADE
-   ========================= */
+/* acessibilidade */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -217,9 +203,7 @@ textarea:focus-visible{
   outline-offset:2px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* rodapé */
 footer{
   margin-top:40px;
   padding:18px;
@@ -227,9 +211,7 @@ footer{
   color:var(--muted);
 }
 
-/* =========================
-   DARK MODE
-   ========================= */
+/* modo escuro */
 body:has(#theme-toggle:checked){
   --bg:#0b1220;
   --surface:#111a2e;

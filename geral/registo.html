@@ -36,31 +36,28 @@
 
 <main id="conteudo" class="container">
 
-<div class="card">
-  <h2>Criar conta</h2>
-  <form class="form" action="#" method="post">
-    <label>Nome
-      <input name="nome" type="text" placeholder="Ex.: Joana" required minlength="2" autocomplete="name">
-    </label>
+  <div class="card">
+    <h2>Criar conta</h2>
 
-    <label>Email
-      <input name="email" type="email" placeholder="nome@exemplo.pt" required autocomplete="email">
-    </label>
+    <p>Nome:</p>
+    <input type="text" placeholder="Nome completo">
 
-    <label>Password
-      <input name="password" type="password" placeholder="mín. 8 caracteres" required minlength="8" autocomplete="new-password">
-    </label>
+    <p>Email:</p>
+    <input type="email" placeholder="nome@exemplo.pt">
 
-    <label>Confirmar password
-      <input name="password2" type="password" placeholder="repetir password" required minlength="8" autocomplete="new-password">
-    </label>
+    <p>Password:</p>
+    <input type="password" placeholder="mín. 8 caracteres">
 
-    <p><button type="submit">Registar</button></p>
-  </form>
-  <p><a href="login.html">Já tenho conta</a></p>
-</div>
+    <p>Confirmar password:</p>
+    <input type="password" placeholder="repetir password">
+
+    <p><a class="button" href="login.html">Registar</a></p>
+
+    <p class="muted">Já tem conta? <a href="login.html">Entrar</a></p>
+  </div>
 
 </main>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
